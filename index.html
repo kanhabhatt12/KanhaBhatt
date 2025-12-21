@@ -24,13 +24,25 @@
       font-weight: bold;
       flex-shrink: 0;
     }
-    .nav a {
+    .nav-left h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #ffffff;
+    }
+    .nav-left .tagline {
+      font-size: 14px;
+      color: #64b5f6;
+      font-style: italic;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+    .nav-right a {
       margin-left: 25px;
       text-decoration: none;
       color: #e0e0e0;
       transition: color 0.3s;
     }
-    .nav a:hover {
+    .nav-right a:hover {
       color: #64b5f6;
     }
     /* Main content */
@@ -68,6 +80,13 @@
     }
     /* Education and Experience */
     .education, .experience {
+      margin-top: 0;
+    }
+    .section-header {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 15px;
       margin-top: 0;
     }
     .education-item, .experience-item {
@@ -147,8 +166,11 @@
 <body>
   <!-- Navigation -->
   <div class="nav">
-    <div></div>
-    <div>
+    <div class="nav-left">
+      <h1>Kanha Bhatt</h1>
+      <div class="tagline">Driving quality, throughput, and operational excellence</div>
+    </div>
+    <div class="nav-right">
       <a href="about.html">About</a>
       <a href="resume.pdf">Resume/CV</a>
       <a href="projects/">Projects</a>
@@ -158,9 +180,10 @@
   <!-- Main content -->
   <div class="container">
     <div class="text">
-      <h1>Kanha Bhatt</h1>
+      <h1></h1>
       
       <div class="education">
+        <div class="section-header">Education</div>
         <div class="education-item">
           <div class="logo">
             <img src="https://images.seeklogo.com/logo-png/48/2/washington-huskies-logo-png_seeklogo-488682.png" alt="UW Logo">
@@ -176,7 +199,7 @@
       </div>
 
       <div class="experience">
-        <div style="border-bottom: 1px solid #444; margin: 20px 0;"></div>
+        <div class="section-header">Experience</div>
         <div class="experience-item">
           <div class="logo">
             <img src="https://www.charin.global/media/pages/community/daimler-truck-ag/7d91fc47a5-1702550359/daimler-truck-sw-new-1280x-q95.png" alt="Daimler Logo">
