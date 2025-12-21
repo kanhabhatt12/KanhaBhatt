@@ -20,7 +20,7 @@
     .nav {
       display: flex;
       justify-content: space-between;
-      padding: 30px 60px;
+      padding: 20px 60px;
       font-weight: bold;
       flex-shrink: 0;
     }
@@ -51,7 +51,7 @@
     }
     .text h1 {
       font-size: 52px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #ffffff;
     }
     .text h2 {
@@ -73,7 +73,7 @@
     .education-item, .experience-item {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       font-size: 16px;
       color: #b0bec5;
     }
@@ -93,39 +93,46 @@
       filter: brightness(0.9);
     }
     /* Profile image */
-    .profile {
+    .profile-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100%;
     }
     .profile img {
-      width: 320px;
-      height: 320px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
+      margin-bottom: 20px;
     }
     /* Social icons */
-    .icons {
-      margin-top: 30px;
+    .profile-icons {
+      display: flex;
+      gap: 25px;
     }
-    .icons a {
-      margin-right: 20px;
-      font-size: 26px;
+    .profile-icons a {
+      font-size: 28px;
       color: #64b5f6;
       text-decoration: none;
       transition: color 0.3s;
     }
-    .icons a:hover {
+    .profile-icons a:hover {
       color: #90caf9;
+    }
+    /* Remove icons from text section */
+    .text .icons {
+      display: none;
     }
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
+        padding: 20px;
       }
-      .profile {
-        margin-top: 40px;
+      .profile-container {
+        margin-top: 30px;
         height: auto;
       }
       .education-item, .experience-item {
@@ -205,8 +212,14 @@
         <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-    <div class="profile">
-      <img src="assets/profile.jpg" alt="Profile photo">
+    <div class="profile-container">
+      <div class="profile">
+        <img src="assets/profile.jpg" alt="Profile photo">
+      </div>
+      <div class="profile-icons">
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
   </div>
 </body>
