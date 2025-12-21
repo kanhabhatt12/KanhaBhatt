@@ -79,6 +79,16 @@
       font-size: 18px;
       color: #b0bec5;
     }
+    /* Two columns layout */
+    .columns {
+      display: flex;
+      gap: 60px;
+      width: 100%;
+      align-items: flex-start;
+    }
+    .education-column, .experience-column {
+      flex: 1;
+    }
     /* Education and Experience */
     .education, .experience {
       margin-top: 0;
@@ -121,7 +131,7 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      margin-top: -60px;
+      margin-top: -40px;
     }
     .profile img {
       width: 300px;
@@ -187,50 +197,56 @@
     <div class="text">
       <h1></h1>
       
-      <div class="education">
-        <div class="section-header">Education</div>
-        <div class="education-item">
-          <div class="logo">
-            <img src="https://images.seeklogo.com/logo-png/48/2/washington-huskies-logo-png_seeklogo-488682.png" alt="UW Logo">
+      <div class="columns">
+        <div class="education-column">
+          <div class="education">
+            <div class="section-header">Education</div>
+            <div class="education-item">
+              <div class="logo">
+                <img src="https://images.seeklogo.com/logo-png/48/2/washington-huskies-logo-png_seeklogo-488682.png" alt="UW Logo">
+              </div>
+              <span>MS in Mechanical Engineering (GPA: 3.94)<br>University of Washington</span>
+            </div>
+            <div class="education-item">
+              <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXtJKE9yvMDNJ62NCz7jsgw60lGP6RjZiTdQ&s" alt="Oregon State Logo">
+              </div>
+              <span>BS in Mechanical & Manufacturing Engineering (GPA: 3.94)<br>Oregon State University</span>
+            </div>
           </div>
-          <span>MS in Mechanical Engineering (GPA: 3.94)<br>University of Washington</span>
-        </div>
-        <div class="education-item">
-          <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXtJKE9yvMDNJ62NCz7jsgw60lGP6RjZiTdQ&s" alt="Oregon State Logo">
-          </div>
-          <span>BS in Mechanical & Manufacturing Engineering (GPA: 3.94)<br>Oregon State University</span>
-        </div>
-      </div>
-
-      <div class="experience">
-        <div class="section-header">Experience</div>
-        <div class="experience-item">
-          <div class="logo">
-            <img src="https://www.charin.global/media/pages/community/daimler-truck-ag/7d91fc47a5-1702550359/daimler-truck-sw-new-1280x-q95.png" alt="Daimler Logo">
-          </div>
-          <span>Cost Analyst<br>Daimler Truck North America</span>
         </div>
         
-        <div class="experience-item">
-          <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEL1N35Jywntk9j5PUtD7A9RLdzKgpRZ7F9A&s" alt="Tesla Logo">
+        <div class="experience-column">
+          <div class="experience">
+            <div class="section-header">Experience</div>
+            <div class="experience-item">
+              <div class="logo">
+                <img src="https://www.charin.global/media/pages/community/daimler-truck-ag/7d91fc47a5-1702550359/daimler-truck-sw-new-1280x-q95.png" alt="Daimler Logo">
+              </div>
+              <span>Cost Analyst<br>Daimler Truck North America</span>
+            </div>
+            
+            <div class="experience-item">
+              <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEL1N35Jywntk9j5PUtD7A9RLdzKgpRZ7F9A&s" alt="Tesla Logo">
+              </div>
+              <span>Process Engineer & Data Science<br>Tesla Inc.</span>
+            </div>
+            
+            <div class="experience-item">
+              <div class="logo">
+                <img src="https://thumbs.dreamstime.com/b/hp-logo-vector-computer-brand-302578860.jpg" alt="HP Logo">
+              </div>
+              <span>Systems & Reliability Engineer<br>HP Inc.</span>
+            </div>
+            
+            <div class="experience-item">
+              <div class="logo">
+                <img src="https://static.stands4.com/images/symbol/2053_duke-university-seal.png" alt="Duke Logo">
+              </div>
+              <span>Materials Research & Machine Learning<br>Duke University</span>
+            </div>
           </div>
-          <span>Process Engineer & Data Science<br>Tesla Inc.</span>
-        </div>
-        
-        <div class="experience-item">
-          <div class="logo">
-            <img src="https://thumbs.dreamstime.com/b/hp-logo-vector-computer-brand-302578860.jpg" alt="HP Logo">
-          </div>
-          <span>Systems & Reliability Engineer<br>HP Inc.</span>
-        </div>
-        
-        <div class="experience-item">
-          <div class="logo">
-            <img src="https://static.stands4.com/images/symbol/2053_duke-university-seal.png" alt="Duke Logo">
-          </div>
-          <span>Materials Research & Machine Learning<br>Duke University</span>
         </div>
       </div>
 
