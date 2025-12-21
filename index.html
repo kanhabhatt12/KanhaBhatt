@@ -13,6 +13,8 @@
       background: linear-gradient(#1a2332, #2d3e52);
       height: 100vh;
       color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
     }
     /* Top navigation */
     .nav {
@@ -20,6 +22,7 @@
       justify-content: space-between;
       padding: 30px 60px;
       font-weight: bold;
+      flex-shrink: 0;
     }
     .nav a {
       margin-left: 25px;
@@ -35,8 +38,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 80px 120px;
-      height: calc(100vh - 120px);
+      padding: 0 120px;
+      flex: 1;
+      min-height: 0;
     }
     .text {
       max-width: 500px;
@@ -47,7 +51,7 @@
     }
     .text h1 {
       font-size: 52px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       color: #ffffff;
     }
     .text h2 {
@@ -64,12 +68,12 @@
     }
     /* Education and Experience */
     .education, .experience {
-      margin-top: 25px;
+      margin-top: 0;
     }
     .education-item, .experience-item {
       display: flex;
       align-items: center;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 16px;
       color: #b0bec5;
     }
@@ -89,6 +93,11 @@
       filter: brightness(0.9);
     }
     /* Profile image */
+    .profile {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
     .profile img {
       width: 320px;
       height: 320px;
@@ -97,7 +106,7 @@
     }
     /* Social icons */
     .icons {
-      margin-top: 40px;
+      margin-top: 30px;
     }
     .icons a {
       margin-right: 20px;
@@ -113,12 +122,17 @@
       .container {
         flex-direction: column;
         text-align: center;
+        padding: 40px 20px;
       }
       .profile {
         margin-top: 40px;
+        height: auto;
       }
       .education-item, .experience-item {
         justify-content: flex-start;
+      }
+      .text {
+        height: auto;
       }
     }
   </style>
@@ -167,7 +181,7 @@
           <div class="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEL1N35Jywntk9j5PUtD7A9RLdzKgpRZ7F9A&s" alt="Tesla Logo">
           </div>
-          <span>Battery Manufacturing Process Engineer & Data Science<br>Tesla</span>
+          <span>Process Engineer & Data Science<br>Tesla</span>
         </div>
         
         <div class="experience-item">
