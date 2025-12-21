@@ -1,45 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jonny B – Projects</title>
+  <title>Kanha Bhatt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(#7fb7e6, #cfe9f8);
+      height: 100vh;
     }
-    h1 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
+
+    /* Top navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 60px;
+      font-weight: bold;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 10px 0;
-    }
-    a {
+
+    .nav a {
+      margin-left: 25px;
       text-decoration: none;
-      color: #0066cc;
+      color: black;
     }
-    a:hover {
-      text-decoration: underline;
+
+    /* Main content */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 120px;
+    }
+
+    .text {
+      max-width: 500px;
+    }
+
+    .text h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    .text h2 {
+      font-size: 22px;
+      font-style: italic;
+      font-weight: normal;
+      margin: 5px 0;
+    }
+
+    .text p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    /* Profile image */
+    .profile img {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Social icons */
+    .icons {
+      margin-top: 40px;
+    }
+
+    .icons a {
+      margin-right: 20px;
+      font-size: 26px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .icons a:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile {
+        margin-top: 40px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<h1>Kanha Bhatt</h1>
-<p>Personal projects and notes.</p>
+  <!-- Navigation -->
+  <div class="nav">
+    <div>Kan. Bhatt</div>
+    <div>
+      <a href="about.html">About</a>
+      <a href="resume.pdf">Resume/CV</a>
+      <a href="projects/">Projects</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </div>
 
-<h2>Folders</h2>
-<ul>
-  <li><a href="projects/">Projects</a></li>
-  <li><a href="notes/">Notes</a></li>
-</ul>
+  <!-- Main content -->
+  <div class="container">
+    <div class="text">
+      <h1>Kanha Bhatt</h1>
+      <h2>Engineer | Research | Projects</h2>
+      <p>A data scientist and engineer.</p>
+
+      <div class="icons">
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/kanhabhatt12" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <img src="assets/profile.jpg" alt="Profile photo">
+    </div>
+  </div>
 
 </body>
 </html>
