@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Kanha Bhatt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(#1a2332, #2d3e52);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #444;
+        }
+        
+        .nav-left h1 {
+            font-size: 32px;
+            color: #ffffff;
+        }
+        
+        .nav-left .tagline {
+            font-size: 16px;
+            color: #64b5f6;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .nav-right a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: color 0.3s;
+        }
+        
+        .nav-right a:hover {
+            color: #64b5f6;
+        }
+        
+        /* Back to Home link */
+        .back-link {
+            margin-bottom: 30px;
+        }
+        
+        .back-link a {
+            color: #64b5f6;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .back-link a:hover {
+            color: #90caf9;
+        }
+        
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-header h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            color: #b0bec5;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Research Grid */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        /* PDF Card */
+        .pdf-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(100, 181, 246, 0.2);
+        }
+        
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-color: #64b5f6;
+        }
+        
+        /* PDF Preview Icon */
+        .pdf-preview {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 2px solid #64b5f6;
+        }
+        
+        .pdf-icon {
+            font-size: 80px;
+            color: #64b5f6;
+            margin-bottom: 15px;
+        }
+        
+        .preview-text {
+            font-size: 14px;
+            color: #b0bec5;
+            text-align: center;
+            padding: 0 10px;
+        }
+        
+        /* PDF Info */
+        .pdf-info h3 {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .pdf-info .date {
+            color: #64b5f6;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .pdf-info .description {
+            color: #b0bec5;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        
+        /* Download Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #64b5f6;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        .download-btn:hover {
+            background: #90caf9;
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #444;
+            color: #b0bec5;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .nav-right a {
+                margin: 0 10px;
+            }
+            
+            .page-header h2 {
+                font-size: 32px;
+            }
+            
+            .research-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .pdf-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav">
+            <div class="nav-left">
+                <h1>Kanha Bhatt</h1>
+                <div class="tagline">Driving quality, throughput, and operational excellence</div>
+            </div>
+            <div class="nav-right">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../resume.pdf">Resume/CV</a>
+                <a href="../gallery.html">Gallery</a>
+            </div>
+        </div>
 
+        <!-- Back to Home -->
+        <div class="back-link">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h2>Research Publications</h2>
+            <p>Explore my academic research, technical papers, and engineering publications in mechanical engineering, materials science, and data-driven manufacturing.</p>
+        </div>
+
+        <!-- Research Grid -->
+        <div class="research-grid">
+            
+            <!-- Research Paper 1 -->
+            <div class="pdf-card">
+                <div class="pdf-preview">
+                    <i class="fas fa-file-pdf pdf-icon"></i>
+                    <div class="preview-text">Click to view PDF document</div>
+                </div>
+                <div class="pdf-info">
+                    <h3>Advanced Materials Characterization Using Machine Learning</h3>
+                    <span class="date">Published: October 2023</span>
+                    <p class="description">Research on applying machine learning algorithms to predict material properties and failure modes in composite structures, conducted at Duke University.</p>
+                    <a href="pdfs/material_ml_research.pdf" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> View PDF
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 Kanha Bhatt | Research Portfolio | Contact: raghavjbhatt@gmail.com</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                <a href="https://linkedin.com/in/kanha-bhatt-a669731b4/" target="_blank" style="color: #64b5f6; text-decoration: none;">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
