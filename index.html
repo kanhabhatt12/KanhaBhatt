@@ -189,102 +189,99 @@
 }
 
 /* =========================
-MOBILE RESPONSIVE FIXES
+IMPROVED MOBILE RESPONSIVE FIXES
 ========================= */
 @media (max-width: 768px) {
-  /* Navigation */
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .nav-right {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .nav-right a {
-    margin-left: 0;
-    font-size: 16px;
-  }
-
-  /* Main container */
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  /* Text section */
-  .text {
-    margin-top: 0;
-    text-align: center;
-  }
-
-  /* Columns stack vertically */
+  /* Fix for three-column layout */
   .columns {
     flex-direction: column;
     gap: 40px;
-    margin: 0;
   }
 
-  /* Profile section */
-  .profile-container {
-    margin: 40px 0 0 0;
+  /* Each column takes full width */
+  .column {
+    width: 100%;
+    margin-bottom: 30px;
   }
 
-  .profile img {
-    width: 180px;
-    height: 180px;
+  /* Fix for item alignment */
+  .education-item,
+  .experience-item,
+  .leadership-item {
+    display: flex;
+    align-items: flex-start; /* Align items to top */
+    margin-bottom: 15px;
+    text-align: left;
+    gap: 15px;
+  }
+
+  /* Logo/image styling */
+  .logo {
+    min-width: 32px; /* Prevent logo from shrinking */
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+    margin-top: 2px; /* Align with first line of text */
+  }
+
+  /* Text container */
+  .education-item span,
+  .experience-item span,
+  .leadership-item span {
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  /* Make multi-line items stack nicely */
+  .education-item,
+  .experience-item,
+  .leadership-item {
+    flex-wrap: nowrap;
   }
 
   /* Section headers */
   .section-header {
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
   }
 
-  /* Items align nicely */
+  /* If there's a container for text content */
+  .item-content {
+    flex: 1;
+    min-width: 0; /* Important for text truncation */
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
   .education-item,
   .experience-item,
   .leadership-item {
-    justify-content: flex-start;
-    align-items: center;
+    gap: 10px;
   }
 
   .logo {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
   }
 
-  /* Improve text readability */
   .education-item span,
   .experience-item span,
   .leadership-item span {
-    font-size: 15px;
-  }
-  
-  /* Body styles */
-  body {
-    height: auto;
-    min-height: 100vh;
-  }
-
-  /* Text wrapping fixes */
-  .education-item span,
-  .experience-item span,
-  .leadership-item span {
-    white-space: normal !important;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    font-size: 14px;
     line-height: 1.4;
   }
 }
 
   </style>
+  
 </head>
 <body>
   <!-- Navigation -->
