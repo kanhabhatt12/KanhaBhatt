@@ -104,10 +104,11 @@
     }
     .education-item, .experience-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 25px;
       font-size: 16px;
       color: #b0bec5;
+      line-height: 1.4;
     }
     .logo {
       width: 40px;
@@ -123,6 +124,15 @@
       height: 100%;
       object-fit: contain;
       filter: brightness(0.9);
+    }
+    .education-item span, .experience-item span {
+      flex: 1;
+      min-width: 0;
+    }
+    .education-item br, .experience-item br {
+      display: block;
+      content: "";
+      margin-top: 4px;
     }
     /* Profile image */
     .profile-container {
