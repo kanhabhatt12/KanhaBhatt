@@ -18,82 +18,131 @@
       padding: 40px 100px;
     }
 
-    .section {
-      margin-bottom: 45px;
+    /* Home button */
+    .back-link {
+      margin-bottom: 25px;
+    }
+    .back-link a {
+      color: #64b5f6;
+      text-decoration: none;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      background: rgba(100,181,246,0.08);
+      transition: all 0.2s ease;
+    }
+    .back-link a:hover {
+      color: #90caf9;
+      background: rgba(100,181,246,0.15);
+      transform: translateY(-2px);
+    }
+
+    /* Photo header */
+    .photo-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 35px;
+    }
+    .photo-row img {
+      width: 120px;
+      height: 120px;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      filter: brightness(0.95);
+    }
+
+    /* Card container */
+    .card {
+      background: rgba(26,35,50,0.55);
+      border-radius: 20px;
+      padding: 24px 30px;
+      margin-bottom: 32px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.05);
+      backdrop-filter: blur(6px);
     }
 
     .section-header {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .section p, .skills-list, .goals-text {
-      font-size: 17px;
+    .card p, .skills-list, .goals-text {
+      font-size: 15px;
       color: #b0bec5;
       line-height: 1.6;
+      margin: 0;
     }
 
     .skills-list {
       list-style: none;
       padding: 0;
     }
-
     .skills-list li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
-
     .skills-list i {
       color: #64b5f6;
-      font-size: 18px;
+      font-size: 15px;
     }
 
     @media (max-width: 768px) {
-      body {
-        padding: 30px;
-        text-align: center;
-      }
-      .skills-list li {
-        justify-content: center;
-      }
+      body { padding: 25px; }
+      .photo-row { flex-wrap: wrap; }
     }
 
   </style>
 </head>
 <body>
 
-  <div class="section">
+  <div class="back-link">
+    <a href="../"><i class="fas fa-house"></i> Home</a>
+  </div>
+
+  <div class="photo-row">
+    <img src="../assets/profile.jpg" alt="Photo 1">
+    <img src="../assets/photo2.jpg" alt="Photo 2">
+  </div>
+
+  <div class="card">
     <div class="section-header">About Me</div>
     <p>
-      I’m Kanha, a Mechanical Engineer with a passion for bridging hardware, simulation, and data-driven decision making.  
-      My work spans laser systems validation, reliability engineering, and manufacturing optimization using machine learning and numerical methods.  
-      I enjoy building models, writing efficient compute code, and turning physics-based insights into practical engineering solutions.
+      I’m Kanha — a Mechanical Engineer driven by solving real physical problems using simulation, intelligent compute, and data-led optimization.
+      My work spans laser systems validation, reliability engineering, manufacturing throughput, and physics-based numerical modeling using Fourier and Laplace methods.
+      I enjoy designing efficient systems backed by high-performance compute and real-world constraints.
     </p>
   </div>
 
-  <div class="section">
+  <div class="card">
     <div class="section-header">Technical Skills</div>
     <ul class="skills-list">
-      <li><i class="fas fa-database"></i> SQL (Trino/Presto), Data Analysis</li>
-      <li><i class="fas fa-chart-line"></i> Python – ODEs, FFT, Laplace & Fourier methods</li>
-      <li><i class="fas fa-cube"></i> Simulation – MPM, FEM, Rigid-body dynamics, Taichi, Taichi MPM</li>
-      <li><i class="fas fa-microchip"></i> Manufacturing & Process Optimization</li>
-      <li><i class="fas fa-brain"></i> Machine Learning for Materials & Reliability</li>
-      <li><i class="fas fa-bolt"></i> Systems Testing, Validation & Reliability Engineering</li>
+      <li><i class="fas fa-database"></i> SQL (Trino/Presto), large-scale analytics</li>
+      <li><i class="fas fa-chart-line"></i> Python — ODEs, FFT, Laplace, Fourier modeling</li>
+      <li><i class="fas fa-cube"></i> Simulation — MPM, FEM, rigid-body dynamics, Taichi</li>
+      <li><i class="fas fa-industry"></i> Process & manufacturing optimization</li>
+      <li><i class="fas fa-brain"></i> ML for materials, reliability & systems</li>
+      <li><i class="fas fa-bolt"></i> Validation, testing & reliability engineering</li>
     </ul>
   </div>
 
-  <div class="section">
+  <div class="card">
     <div class="section-header">Future Goals</div>
     <div class="goals-text">
-      My long-term goal is to design intelligent physical systems that optimize themselves—especially in energy, manufacturing, and materials.  
-      I aim to continue working on high-performance simulation tools, sustainable BIPV/LSC window systems, and scalable compute architectures that merge physics and AI.
+      I plan to build physical systems that optimize themselves by default — especially in sustainable energy and advanced manufacturing.
+      My interests include scalable simulation frameworks, intelligent infrastructure, and self-optimizing BIPV/LSC smart window systems that merge physics and AI.
+      The long-term goal is efficient and intelligent physical design at scale.
     </div>
   </div>
 
