@@ -5,8 +5,8 @@
   <title>About – Kanha Bhatt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
 
+  <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -15,14 +15,19 @@
       color: #e0e0e0;
       display: flex;
       flex-direction: column;
-      padding: 40px 100px;
+      align-items: center;
+      padding: 40px 20px;
     }
 
     /* Home button */
-    .back-link {
-      margin-bottom: 25px;
+    .home-link {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 22px;
+      text-align: left;
     }
-    .back-link a {
+
+    .home-link a {
       color: #64b5f6;
       text-decoration: none;
       font-size: 16px;
@@ -30,54 +35,41 @@
       align-items: center;
       gap: 6px;
       padding: 8px 14px;
-      border-radius: 12px;
-      background: rgba(100,181,246,0.08);
+      border-radius: 10px;
+      background: rgba(100,181,246,0.07);
       transition: all 0.2s ease;
     }
-    .back-link a:hover {
+
+    .home-link a:hover {
       color: #90caf9;
-      background: rgba(100,181,246,0.15);
+      background: rgba(100,181,246,0.14);
       transform: translateY(-2px);
     }
 
-    /* Photo header */
-    .photo-row {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      margin-bottom: 35px;
-    }
-    .photo-row img {
-      width: 120px;
-      height: 120px;
-      border-radius: 18px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-      filter: brightness(0.95);
-    }
-
-    /* Card container */
+    /* Card containers */
     .card {
-      background: rgba(26,35,50,0.55);
-      border-radius: 20px;
-      padding: 24px 30px;
+      background: rgba(26,35,50,0.52);
+      border-radius: 18px;
+      padding: 22px 28px;
       margin-bottom: 32px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-      border: 1px solid rgba(255,255,255,0.05);
-      backdrop-filter: blur(6px);
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.32);
+      border: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(5px);
     }
 
     .section-header {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 14px;
       padding-bottom: 6px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
     .card p, .skills-list, .goals-text {
-      font-size: 15px;
+      font-size: 16px;
       color: #b0bec5;
       line-height: 1.6;
       margin: 0;
@@ -86,63 +78,74 @@
     .skills-list {
       list-style: none;
       padding: 0;
+      margin-top: 12px;
     }
+
     .skills-list li {
       margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
+
     .skills-list i {
       color: #64b5f6;
       font-size: 15px;
     }
 
-    @media (max-width: 768px) {
-      body { padding: 25px; }
-      .photo-row { flex-wrap: wrap; }
+    /* Image placeholder */
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+      filter: brightness(0.9);
     }
 
+    @media (max-width: 768px) {
+      .home-link { text-align: center; }
+      .skills-list li { justify-content: center; }
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="back-link">
+  <div class="home-link">
     <a href="../"><i class="fas fa-house"></i> Home</a>
   </div>
 
-  <div class="photo-row">
-    <img src="../assets/profile.jpg" alt="Photo 1">
-    <img src="../assets/photo2.jpg" alt="Photo 2">
-  </div>
-
   <div class="card">
+    <img src="assets/about-photo1.jpg" alt="Your photo here">
     <div class="section-header">About Me</div>
     <p>
-      I’m Kanha — a Mechanical Engineer driven by solving real physical problems using simulation, intelligent compute, and data-led optimization.
-      My work spans laser systems validation, reliability engineering, manufacturing throughput, and physics-based numerical modeling using Fourier and Laplace methods.
-      I enjoy designing efficient systems backed by high-performance compute and real-world constraints.
+      I’m Kanha — a Mechanical Engineer who works at the intersection of hardware validation, physical simulation, and data-driven optimization.
+      My background includes laser systems testing, reliability engineering, manufacturing process improvement, and numerical physics modeling using Fourier and Laplace techniques.
+      I enjoy building efficient compute tools that translate physics into real-world engineering impact.
     </p>
   </div>
 
   <div class="card">
+    <img src="assets/about-photo2.jpg" alt="Your photo here">
     <div class="section-header">Technical Skills</div>
     <ul class="skills-list">
       <li><i class="fas fa-database"></i> SQL (Trino/Presto), large-scale analytics</li>
-      <li><i class="fas fa-chart-line"></i> Python — ODEs, FFT, Laplace, Fourier modeling</li>
-      <li><i class="fas fa-cube"></i> Simulation — MPM, FEM, rigid-body dynamics, Taichi</li>
-      <li><i class="fas fa-industry"></i> Process & manufacturing optimization</li>
-      <li><i class="fas fa-brain"></i> ML for materials, reliability & systems</li>
-      <li><i class="fas fa-bolt"></i> Validation, testing & reliability engineering</li>
+      <li><i class="fas fa-code"></i> Python – ODEs, FFT, Laplace & Fourier methods</li>
+      <li><i class="fas fa-cube"></i> Simulation – MPM, FEM, dynamics, Taichi compute</li>
+      <li><i class="fas fa-industry"></i> Manufacturing & process optimization</li>
+      <li><i class="fas fa-brain"></i> Machine learning for materials & reliability</li>
+      <li><i class="fas fa-bolt"></i> Systems testing, validation & reliability</li>
     </ul>
   </div>
 
   <div class="card">
+    <img src="assets/about-photo3.jpg" alt="Your photo here">
     <div class="section-header">Future Goals</div>
     <div class="goals-text">
-      I plan to build physical systems that optimize themselves by default — especially in sustainable energy and advanced manufacturing.
-      My interests include scalable simulation frameworks, intelligent infrastructure, and self-optimizing BIPV/LSC smart window systems that merge physics and AI.
-      The long-term goal is efficient and intelligent physical design at scale.
+      I aim to continue building intelligent physical systems that optimize performance by design—especially in sustainable energy and advanced manufacturing.
+      My interests include high-performance simulation frameworks, scalable compute architectures, and smart BIPV/LSC window infrastructure that merges physics and AI.
+      My long-term goal is to design efficient and intelligent systems at scale.
     </div>
   </div>
 
