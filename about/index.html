@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About – Kanha Bhatt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(#1a2332, #2d3e52);
+      min-height: 100vh;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 100px;
+    }
+
+    .section {
+      margin-bottom: 45px;
+    }
+
+    .section-header {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 15px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #444;
+    }
+
+    .section p, .skills-list, .goals-text {
+      font-size: 17px;
+      color: #b0bec5;
+      line-height: 1.6;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills-list i {
+      color: #64b5f6;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 30px;
+        text-align: center;
+      }
+      .skills-list li {
+        justify-content: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="section-header">About Me</div>
+    <p>
+      I’m Kanha, a Mechanical Engineer with a passion for bridging hardware, simulation, and data-driven decision making.  
+      My work spans laser systems validation, reliability engineering, and manufacturing optimization using machine learning and numerical methods.  
+      I enjoy building models, writing efficient compute code, and turning physics-based insights into practical engineering solutions.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Technical Skills</div>
+    <ul class="skills-list">
+      <li><i class="fas fa-database"></i> SQL (Trino/Presto), Data Analysis</li>
+      <li><i class="fas fa-chart-line"></i> Python – ODEs, FFT, Laplace & Fourier methods</li>
+      <li><i class="fas fa-cube"></i> Simulation – MPM, FEM, Rigid-body dynamics, Taichi, Taichi MPM</li>
+      <li><i class="fas fa-microchip"></i> Manufacturing & Process Optimization</li>
+      <li><i class="fas fa-brain"></i> Machine Learning for Materials & Reliability</li>
+      <li><i class="fas fa-bolt"></i> Systems Testing, Validation & Reliability Engineering</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Future Goals</div>
+    <div class="goals-text">
+      My long-term goal is to design intelligent physical systems that optimize themselves—especially in energy, manufacturing, and materials.  
+      I aim to continue working on high-performance simulation tools, sustainable BIPV/LSC window systems, and scalable compute architectures that merge physics and AI.
+    </div>
+  </div>
+
+</body>
+</html>
