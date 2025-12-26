@@ -15,8 +15,14 @@
       color: #e0e0e0;
       display: flex;
       flex-direction: column;
-      align-items: center;
       padding: 40px 20px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
 
     /* Navigation (copied from main site) */
@@ -59,20 +65,23 @@
 
     /* Back to Home link */
     .back-link {
-        margin-bottom: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 1000px;
+      padding: 0 40px;
     }
         
     .back-link a {
-        color: #64b5f6;
-        text-decoration: none;
-        font-size: 18px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
+      color: #64b5f6;
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
         
-        .back-link a:hover {
-            color: #90caf9;
+    .back-link a:hover {
+      color: #90caf9;
     }
 
     /* Card containers */
@@ -167,6 +176,7 @@
         align-items: center;
         text-align: center;
         gap: 18px;
+        padding: 20px 20px;
       }
       .nav-right {
         display: flex;
@@ -176,6 +186,10 @@
       }
       .nav-right a {
         margin-left: 0;
+      }
+
+      .back-link {
+        padding: 0 20px;
       }
 
       .card {
@@ -197,64 +211,65 @@
 </head>
 
 <body>
-
-  <div class="nav">
-    <div class="nav-left">
-      <h1>Kanha Bhatt</h1>
-      <div class="tagline">Driving quality, throughput, and operational excellence</div>
-    </div>
-    <div class="nav-right">
-      <a href="../research/">Research</a>
-      <a href="../projects/">Projects</a>
-      <a href="../about/">About</a>
-      <a href="../resume.pdf">Resume</a>
-    </div>
-  </div>
-
-  <!-- Back to Home -->
-  <div class="back-link">
-        <a href="../index.html">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
+  <div class="content-wrapper">
+    <div class="nav">
+      <div class="nav-left">
+        <h1>Kanha Bhatt</h1>
+        <div class="tagline">Driving quality, throughput, and operational excellence</div>
       </div>
-
-  <div class="card">
-    <div class="card-text">
-      <div class="section-header">About Me</div>
-      <p>
-        I'm Kanha — a Mechanical Engineer working at the intersection of hardware validation, simulation, and data-led optimization.
-        My background includes laser systems testing, reliability engineering, manufacturing throughput improvement, and physics-based numerical modeling using Fourier and Laplace methods.
-        I enjoy building efficient compute tools that turn physical insight into real-world engineering impact.
-      </p>
-    </div>
-    <img src="pdfs/AboutPhoto.png" alt="Your photo here" class="about-img">
-  </div>
-
-  <div class="card">
-    <div class="card-text">
-      <div class="section-header">Technical Skills</div>
-      <ul class="skills-list">
-        <li><i class="fas fa-database"></i> SQL (Trino/Presto), large-scale analytics</li>
-        <li><i class="fas fa-code"></i> Python – ODEs, FFT, Laplace & Fourier modeling</li>
-        <li><i class="fas fa-cube"></i> Simulation – MPM, FEM, dynamics, Taichi compute</li>
-        <li><i class="fas fa-industry"></i> Manufacturing & process optimization</li>
-        <li><i class="fas fa-brain"></i> ML for materials & system reliability</li>
-        <li><i class="fas fa-bolt"></i> Systems testing, validation & reliability</li>
-      </ul>
-    </div>
-    <img src="pdfs/TeslaGroup.png" alt="Your photo here" class="skills-img">
-  </div>
-
-  <div class="card">
-    <div class="card-text">
-      <div class="section-header">Future Goals</div>
-      <div class="goals-text">
-        I aim to build physical systems that optimize performance by design—especially in sustainable energy and advanced manufacturing.
-        My interests include high-performance simulation frameworks, scalable compute architectures, and intelligent BIPV/LSC window infrastructure that merges physics and AI.
-        My long-term goal is efficient, intelligent physical design at scale.
+      <div class="nav-right">
+        <a href="../research/">Research</a>
+        <a href="../projects/">Projects</a>
+        <a href="../about/">About</a>
+        <a href="../resume.pdf">Resume</a>
       </div>
     </div>
-    <img src="pdfs/BostonMA.png" alt="Your photo here" class="goals-img">
+
+    <!-- Back to Home -->
+    <div class="back-link">
+      <a href="../index.html">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="card-text">
+        <div class="section-header">About Me</div>
+        <p>
+          I'm Kanha — a Mechanical Engineer working at the intersection of hardware validation, simulation, and data-led optimization.
+          My background includes laser systems testing, reliability engineering, manufacturing throughput improvement, and physics-based numerical modeling using Fourier and Laplace methods.
+          I enjoy building efficient compute tools that turn physical insight into real-world engineering impact.
+        </p>
+      </div>
+      <img src="pdfs/AboutPhoto.png" alt="Your photo here" class="about-img">
+    </div>
+
+    <div class="card">
+      <div class="card-text">
+        <div class="section-header">Technical Skills</div>
+        <ul class="skills-list">
+          <li><i class="fas fa-database"></i> SQL (Trino/Presto), large-scale analytics</li>
+          <li><i class="fas fa-code"></i> Python – ODEs, FFT, Laplace & Fourier modeling</li>
+          <li><i class="fas fa-cube"></i> Simulation – MPM, FEM, dynamics, Taichi compute</li>
+          <li><i class="fas fa-industry"></i> Manufacturing & process optimization</li>
+          <li><i class="fas fa-brain"></i> ML for materials & system reliability</li>
+          <li><i class="fas fa-bolt"></i> Systems testing, validation & reliability</li>
+        </ul>
+      </div>
+      <img src="pdfs/TeslaGroup.png" alt="Your photo here" class="skills-img">
+    </div>
+
+    <div class="card">
+      <div class="card-text">
+        <div class="section-header">Future Goals</div>
+        <div class="goals-text">
+          I aim to build physical systems that optimize performance by design—especially in sustainable energy and advanced manufacturing.
+          My interests include high-performance simulation frameworks, scalable compute architectures, and intelligent BIPV/LSC window infrastructure that merges physics and AI.
+          My long-term goal is efficient, intelligent physical design at scale.
+        </div>
+      </div>
+      <img src="pdfs/BostonMA.png" alt="Your photo here" class="goals-img">
+    </div>
   </div>
 
 </body>
