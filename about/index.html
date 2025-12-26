@@ -97,11 +97,16 @@
     }
 
     /* Fix for 2nd & 3rd card images */
+    .card:nth-of-type(2),
+    .card:nth-of-type(3) {
+      align-items: center;
+    }
+
     .card:nth-of-type(2) img,
     .card:nth-of-type(3) img {
       width: 180px;
       height: auto;
-      display: block;
+      flex-shrink: 0;
     }
 
 
