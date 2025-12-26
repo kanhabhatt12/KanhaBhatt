@@ -88,33 +88,32 @@
     }
 
     .card img {
-      border-radius: 14px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.28);
-      filter: brightness(0.9);
-      flex-shrink: 0;
-    }
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+  filter: brightness(0.9);
+  flex-shrink: 0;
+  object-fit: contain; /* Changed from 'cover' to 'contain' */
+  background-color: rgba(0, 0, 0, 0.1); /* Optional: adds background for transparent images */
+}
 
-    /* Fix for 2nd & 3rd card images */
-    .card:nth-of-type(2),
-    .card:nth-of-type(3) {
-      align-items: center;
-    }
-
-    /* About Me image */
-    .card:nth-of-type(1) img {
-    width: 50px; /* Changed from 50px */
-    }
+/* About Me image */
+.card:nth-of-type(1) img {
+  width: 250px; /* Increased from 50px */
+  height: 250px; /* Added fixed height */
+  object-fit: cover; /* Keep cover for profile photo */
+}
 
 /* Technical Skills image */  
-    .card:nth-of-type(2) img {
-    width: 400px; /* Changed from 400px */
-    }
+.card:nth-of-type(2) img {
+  width: 300px; /* Reduced from 400px */
+  height: 200px; /* Added fixed height */
+}
 
 /* Future Goals image */
-    .card:nth-of-type(3) img {
-    width: 300px; /* Changed from 400px */
-    }
+.card:nth-of-type(3) img {
+  width: 300px; /* Already set */
+  height: 200px; /* Added fixed height */
+}
 
 
     .card p, .skills-list, .goals-text {
