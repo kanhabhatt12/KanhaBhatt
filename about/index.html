@@ -96,22 +96,25 @@
       background-color: rgba(0, 0, 0, 0.1);
     }
 
-    /* About Me image */
-    .card:nth-of-type(1) img {
+    img.about-img {
       width: 250px !important;
       height: 250px !important;
+      max-width: 250px !important;
+      max-height: 250px !important;
     }
 
-    /* Technical Skills image */  
-    .card:nth-of-type(2) img {
+    img.skills-img {
       width: 300px !important;
       height: 200px !important;
+      max-width: 300px !important;
+      max-height: 200px !important;
     }
 
-    /* Future Goals image */
-    .card:nth-of-type(3) img {
+    img.goals-img {
       width: 300px !important;
       height: 200px !important;
+      max-width: 300px !important;
+      max-height: 200px !important;
     }
 
     .card p, .skills-list, .goals-text {
@@ -199,7 +202,7 @@
         I enjoy building efficient compute tools that turn physical insight into real-world engineering impact.
       </p>
     </div>
-    <img src="pdfs/AboutPhoto.png" alt="Your photo here">
+    <img src="pdfs/AboutPhoto.png" alt="Your photo here" class="about-img">
   </div>
 
   <div class="card">
@@ -214,7 +217,7 @@
         <li><i class="fas fa-bolt"></i> Systems testing, validation & reliability</li>
       </ul>
     </div>
-    <img src="pdfs/TeslaGroup.png" alt="Your photo here">
+    <img src="pdfs/TeslaGroup.png" alt="Your photo here" class="skills-img">
   </div>
 
   <div class="card">
@@ -226,7 +229,7 @@
         My long-term goal is efficient, intelligent physical design at scale.
       </div>
     </div>
-    <img src="pdfs/BostonMA.png" alt="Your photo here">
+    <img src="pdfs/BostonMA.png" alt="Your photo here" class="goals-img">
   </div>
 
 </body>
