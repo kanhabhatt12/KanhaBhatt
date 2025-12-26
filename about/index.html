@@ -96,6 +96,17 @@
       flex-shrink: 0;
     }
 
+    /* Fix for 2nd & 3rd card images */
+    .card:nth-of-type(2) img,
+    .card:nth-of-type(3) img {
+      width: 160px;              /* consistent, sleek size */
+      display: block;
+      margin: 0 auto;            /* center horizontally */
+      align-self: center;        /* center in flex container */
+      text-align: center;
+    }
+
+
     .card p, .skills-list, .goals-text {
       font-size: 16px;
       color: #b0bec5;
