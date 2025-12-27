@@ -249,8 +249,12 @@ MOBILE RESPONSIVE FIXES
 
   /* Items align nicely */
   .education-item,
-  .experience-item,
   .leadership-item {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .experience-item {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -260,8 +264,17 @@ MOBILE RESPONSIVE FIXES
   .logo {
     width: 32px;
     height: 32px;
+  }
+
+  .experience-item .logo {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .education-item .logo,
+  .leadership-item .logo {
+    margin-right: 15px;
+    margin-bottom: 0;
   }
 
   /* Improve text readability */
